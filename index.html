@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To My Best Friend ❤️ | Dark Galaxy Journey</title>
+  <meta name="description" content="A premium modern dark galaxy website dedicated to my best friend with glowing neon hearts, memory timeline, photo gallery, music player, handwritten letter, and surprise memories.">
+  
+  <!-- Fonts: Outfit, Plus Jakarta Sans, Caveat & Dancing Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="galaxy-body">
+
+  <!-- Interactive Background Canvas (Stars, Nebula, Shooting Stars) -->
+  <canvas id="galaxyCanvas"></canvas>
+  <div class="nebula-overlay"></div>
+  <div class="floating-hearts-container" id="floatingHearts"></div>
+
+  <!-- Top Mockup Toolbar / Controls Bar -->
+  <header class="top-navbar glass-card-nav">
+    <div class="nav-left">
+      <div class="mac-controls">
+        <span class="mac-dot red"></span>
+        <span class="mac-dot yellow"></span>
+        <span class="mac-dot green"></span>
+      </div>
+      <span class="nav-brand"><span class="neon-text-pink">COSMIC</span> BESTIES ✨</span>
+    </div>
+    
+    <nav class="nav-links">
+      <a href="#hero" class="nav-link active">Home</a>
+      <a href="#timeline" class="nav-link">Our Journey</a>
+      <a href="#gallery" class="nav-link">Memories</a>
+      <a href="#music" class="nav-link">Song</a>
+      <a href="#letter" class="nav-link">Letter</a>
+      <a href="#jokes" class="nav-link">Inside Jokes</a>
+      <a href="#promises" class="nav-link">Promises</a>
+    </nav>
+
+    <div class="nav-right">
+      <button class="icon-btn" id="audioToggleBtn" title="Play Ambient Music">
+        <span class="icon">🎵</span>
+        <span class="sound-wave-icon">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+      <button class="glow-btn-sm" id="topSurpriseBtn">🎁 Surprise</button>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <div class="hero-badge animate-fade-down">
+          <span class="badge-dot"></span> Galaxy Friendship Edition 2019-2025
+        </div>
+        
+        <h1 class="hero-title animate-glow-text">
+          To My Best Friend <span class="neon-heart-pulse">❤️</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          "Every memory with you is my favorite memory."
+        </p>
+
+        <div class="hero-actions">
+          <a href="#timeline" class="btn-glow btn-primary">
+            <span class="btn-text">Our Journey</span>
+            <span class="btn-glow-ring"></span>
+            <span class="btn-icon">🚀</span>
+          </a>
+          
+          <button class="btn-glow btn-secondary" id="secretMsgBtn">
+            <span class="btn-text">Secret Message</span>
+            <span class="btn-glow-ring"></span>
+            <span class="btn-icon">🔐</span>
+          </button>
+        </div>
+
+        <div class="hero-stats glass-card">
+          <div class="stat-item">
+            <span class="stat-number" id="daysCount">2,190+</span>
+            <span class="stat-label">Days of Friendship</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">∞</span >
+            <span class="stat-label">Inside Jokes</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Unbreakable Bond</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbit-container">
+          <div class="orbit-ring ring-1"></div>
+          <div class="orbit-ring ring-2"></div>
+          <div class="orbit-ring ring-3"></div>
+          <div class="center-photo-card glass-card">
+            <img src="assets/hero.jpg" alt="Best Friends Stargazing" id="heroImage">
+            <div class="card-glow-overlay"></div>
+            <div class="card-badge">✨ Stargazing Besties</div>
+          </div>
+          <div class="orbit-badge badge-p2 glass-card">
+            <span>🌌 Written in the Stars</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span class="scroll-text">Scroll to explore</span>
+        <div class="mouse-icon">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE SECTION (2019 - 2025) -->
+    <section id="timeline" class="timeline-section section-padding">
+      <div class="section-header text-center">
+        <span class="section-tag">CHRONICLES OF US</span>
+        <h2 class="section-title">Our Timeline <span class="neon-text-pink">(2019 - 2025)</span></h2>
+        <p class="section-desc">Six unforgettable years of laughter, late-night talks, spontaneous trips, and endless growth.</p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-beam"></div>
+
+        <!-- 2019 -->
+        <div class="timeline-item left animate-on-scroll">
+          <div class="timeline-node">
+            <span class="node-glow"></span>
+            <span class="node-year">2019</span>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-year-tag">2019 • The Spark</div>
+            <h3 class="timeline-title">Where It All Began ☕</h3>
+            <p class="timeline-text">
+              The day our paths crossed! What started as a random conversation quickly turned into hours of talking like we've known each other for a lifetime.
+            </p>
+            <div class="timeline-media">
+              <img src="assets/milestone1.jpg" alt="2019 Memory" loading="lazy">
+              <span class="media-caption">Campus Grounds, Fall 2019</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2020 -->
+        <div class="timeline-item right animate-on-scroll">
+          <div class="timeline-node">
+            <span class="node-glow"></span>
+            <span class="node-year">2020</span>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-year-tag">2020 • Lockdowns & Late Nights</div>
+            <h3 class="timeline-title">Surviving the Chaos Together 🎧</h3>
+            <p class="timeline-text">
+              When the world stood still, our friendship leveled up. 4-hour video calls, Among Us marathons, and sharing playlists kept us sane.
+            </p>
+            <div class="timeline-tags">
+              <span>#DiscordMarathons</span>
+              <span>#3AMTalks</span>
+              <span>#Unstoppable</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2021 -->
+        <div class="timeline-item left animate-on-scroll">
+          <div class="timeline-node">
+            <span class="node-glow"></span>
+            <span class="node-year">2021</span>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-year-tag">2021 • Adventure Awaits</div>
+            <h3 class="timeline-title">Epic Sunset Road Trip 🚗💨</h3>
+            <p class="timeline-text">
+              Windows down, singing off-key to old pop anthems, and chasing coastal sunsets. The trip that sealed our status as partners in crime.
+            </p>
+            <div class="timeline-media">
+              <img src="assets/milestone2.jpg" alt="2021 Roadtrip Memory" loading="lazy">
+              <span class="media-caption">Golden Hour Highway, 2021</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2022 -->
+        <div class="timeline-item right animate-on-scroll">
+          <div class="timeline-node">
+            <span class="node-glow"></span>
+            <span class="node-year">2022</span>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-year-tag">2022 • Dreams & Coffee</div>
+            <h3 class="timeline-title">Chasing Goals & Big Moves ☕🌟</h3>
+            <p class="timeline-text">
+              Supporting each other through exams, job interviews, heartbreaks, and victories. Always the first phone call when good news happened!
+            </p>
+            <div class="timeline-tags">
+              <span>#HustleMode</span>
+              <span>#HypeBestie</span>
+              <span>#CoffeeAddicts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="timeline-item left animate-on-scroll">
+          <div class="timeline-node">
+            <span class="node-glow"></span>
+            <span class="node-year">2023</span>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-year-tag">2023 • Celebration</div>
+            <h3 class="timeline-title">The Unforgettable Birthday Night 🎉</h3>
+            <p class="timeline-text">
+              Sparklers, neon lights, tears of joy, and the most thoughtful surprises. You made sure every birthday felt like a national holiday.
+            </p>
+            <div class="timeline-tags">
+              <span>#BestSurpriseEver</span>
+              <span>#Sparklers</span>
+              <span>#NeonNights</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="timeline-item right animate-on-scroll">
+          <div class="timeline-node">
+            <span class="node-glow"></span>
+            <span class="node-year">2024</span>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-year-tag">2024 • Rock Solid</div>
+            <h3 class="timeline-title">Through Thick & Thin 🛡️</h3>
+            <p class="timeline-text">
+              Life threw challenges, but having you by my side made everything manageable. Real friendship isn't about being inseparable, it's about being undivided.
+            </p>
+            <div class="timeline-tags">
+              <span>#AnchorInTheStorm</span>
+              <span>#FamilyByChoice</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="timeline-item left animate-on-scroll">
+          <div class="timeline-node special-node">
+            <span class="node-glow-special"></span>
+            <span class="node-year">2025</span>
+          </div>
+          <div class="timeline-content glass-card glowing-border-pink">
+            <div class="timeline-year-tag special-tag">2025 & Beyond • Forever</div>
+            <h3 class="timeline-title">To Infinity and Beyond 🌌✨</h3>
+            <p class="timeline-text">
+              Here we are in 2025, stronger, happier, and closer than ever. Ready for whatever cosmic adventures the future holds!
+            </p>
+            <div class="timeline-footer-badge">
+              <span>♾️ Eternal Friendship Locked In</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <section id="gallery" class="gallery-section section-padding">
+      <div class="section-header text-center">
+        <span class="section-tag">CAPSULES OF JOY</span>
+        <h2 class="section-title">Memories Vault 📸</h2>
+        <p class="section-desc">Snapshots of moments that froze time. Click any photo for full view!</p>
+
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">All Snapshots</button>
+          <button class="filter-btn" data-filter="trips">Road trips</button>
+          <button class="filter-btn" data-filter="smiles">Laughs & Smiles</button>
+          <button class="filter-btn" data-filter="aesthetic">Galaxy Vibe</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-card glass-card filter-item aesthetic" data-title="Glowing Fairy Lights ✨" data-sub="Holding lights in the dark">
+          <img src="assets/milestone2.jpg" alt="Glowing Fairy Lights Ball">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Glowing Fairy Lights ✨</h4>
+              <p>Shining bright in the darkest nights</p>
+            </div>
+            <span class="zoom-icon">🔍</span>
+          </div>
+        </div>
+
+        <div class="gallery-card glass-card filter-item smiles" data-title="Self Obsessed Aesthetic 💖" data-sub="Fairy lights & night vibes">
+          <img src="assets/milestone1.jpg" alt="Self Obsessed Collage">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Self Obsessed Aesthetic 💖</h4>
+              <p>Fairy lights & magical night memories</p>
+            </div>
+            <span class="zoom-icon">🔍</span>
+          </div>
+        </div>
+
+        <div class="gallery-card glass-card filter-item aesthetic" data-title="Stargazing Whispers 🌌" data-sub="Midnight under the cosmic sky">
+          <img src="assets/hero.jpg" alt="Galaxy Stargazing">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Stargazing Whispers 🌌</h4>
+              <p>Counting shooting stars together</p>
+            </div>
+            <span class="zoom-icon">🔍</span>
+          </div>
+        </div>
+
+        <div class="gallery-card glass-card filter-item aesthetic" data-title="Neon Heart Synth 💖" data-sub="Favorite vibe playlist">
+          <img src="assets/album.jpg" alt="Neon Heart Synth">
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <h4>Neon Heart Synth 💖</h4>
+              <p>Our official friendship anthem cover</p>
+            </div>
+            <span class="zoom-icon">🔍</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MUSIC PLAYER CARD SECTION -->
+    <section id="music" class="music-section section-padding">
+      <div class="section-header text-center">
+        <span class="section-tag">OUR SOUNDTRACK</span>
+        <h2 class="section-title">The Favorite Song 🎵</h2>
+        <p class="section-desc">The song that immediately plays in my head whenever I think of our wild adventures.</p>
+      </div>
+
+      <div class="music-player-container">
+        <div class="music-card glass-card glowing-border-purple">
+          <div class="music-visualizer-bg"></div>
+
+          <div class="music-left">
+            <div class="album-art-wrapper">
+              <img src="assets/album.jpg" alt="Album Cover" class="album-art" id="playerAlbumArt">
+              <div class="album-vinyl-ring"></div>
+              <div class="music-play-badge" id="playBadgeIcon">▶</div>
+            </div>
+          </div>
+
+          <div class="music-right">
+            <div class="song-meta">
+              <span class="genre-pill">✨ BEST FRIEND ANTHEM</span>
+              <h3 class="song-title" id="songTitle">Count On Me (Galaxy Remix)</h3>
+              <p class="song-artist" id="songArtist">Bruno Mars • Dedicated to You</p>
+            </div>
+
+            <!-- Animated Equalizer Visualizer -->
+            <div class="eq-bars-container" id="eqContainer">
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+              <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+            </div>
+
+            <!-- Scrubber / Progress Bar -->
+            <div class="scrubber-wrapper">
+              <div class="progress-bar-container" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+                <div class="progress-handle" id="progressHandle"></div>
+              </div>
+              <div class="time-display">
+                <span id="currentTime">0:00</span>
+                <span id="durationTime">3:17</span>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="player-controls">
+              <button class="control-btn" id="prevTrackBtn" title="Previous Memory">⏮</button>
+              <button class="control-btn play-btn" id="mainPlayBtn" title="Play Track on Spotify">
+                <span id="playIcon">▶</span>
+              </button>
+              <button class="control-btn" id="nextTrackBtn" title="Next Memory">⏭</button>
+              <button class="control-btn favorite-btn" id="favSongBtn" title="Favorite">❤️</button>
+              <a href="https://open.spotify.com/track/6FjbAnaPRPwiP3sciEYctO?si=FjA--nlDRM-udivFWYIYnw" target="_blank" class="spotify-link-btn" title="Open in Spotify">
+                <span class="spotify-icon">🟢</span> Listen on Spotify
+              </a>
+            </div>
+
+            <!-- Spotify Player Embed Box -->
+            <div class="spotify-embed-wrapper" id="spotifyEmbedWrapper">
+              <iframe id="spotifyIframe" 
+                style="border-radius:16px; width: 100%; height: 152px;" 
+                src="https://open.spotify.com/embed/track/6FjbAnaPRPwiP3sciEYctO?utm_source=generator&theme=0" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+              </iframe>
+            </div>
+
+            <div class="lyric-snippet glass-card-subtle">
+              <p>"If you ever find yourself stuck in the middle of the sea, I'll sail the world to find you..." 🌊✨</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HANDWRITTEN LETTER SECTION -->
+    <section id="letter" class="letter-section section-padding">
+      <div class="section-header text-center">
+        <span class="section-tag">FROM THE HEART</span>
+        <h2 class="section-title">A Letter For You ✉️</h2>
+        <p class="section-desc">Words I don't say often enough, but mean with all my heart.</p>
+      </div>
+
+      <div class="letter-card-container">
+        <div class="letter-envelope glass-card">
+          <div class="wax-seal-badge" id="sealBadge">
+            <span class="seal-icon">💖</span>
+            <span class="seal-text">SEALED WITH LOVE</span>
+          </div>
+
+          <div class="letter-content" id="letterBody">
+            <div class="letter-date">Cosmic Calendar • 2025</div>
+            <h3 class="letter-greeting">Dear Besti,</h3>
+            
+            <div class="letter-text-body">
+              <p>
+                In a universe of 8 billion people, finding someone who gets your humor, holds your secrets without judgment, and stands by you in every storm is the rarest gift of all.
+              </p>
+              <p>
+                Thank you for being my constant anchor. Thank you for the endless laughs that make our stomachs hurt, the late-night talks that heal the soul, and the quiet moments where no words are needed.
+              </p>
+              <p>
+                No matter where life takes us, how busy we get, or how many miles lie between us—you will always have a permanent place in my heart. Here's to us, to our past, and to the infinite memories we have yet to write.
+              </p>
+            </div>
+
+            <div class="letter-signature">
+              <span class="sig-line">Forever & Always,</span>
+              <span class="sig-name">Your Bestfriend ❤️</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLORFUL INSIDE JOKES SECTION -->
+    <section id="jokes" class="jokes-section section-padding">
+      <div class="section-header text-center">
+        <span class="section-tag">NO ONE ELSE WOULD GET THIS</span>
+        <h2 class="section-title">Inside Jokes Vault 😂</h2>
+        <p class="section-desc">Flip each card to reveal the hilarious story behind our legendary jokes!</p>
+      </div>
+
+      <div class="jokes-grid">
+        
+        <!-- Joke Card 1 -->
+        <div class="joke-card-3d">
+          <div class="card-inner">
+            <div class="card-front joke-theme-pink glass-card">
+              <span class="joke-emoji">🍟</span>
+              <h3>"Just 5 Minutes Away"</h3>
+              <p class="joke-hint">(The biggest lie in human history)</p>
+              <span class="flip-prompt">Tap to reveal 🔄</span>
+            </div>
+            <div class="card-back glass-card">
+              <h4>The Truth 🙈</h4>
+              <p>When you said "I'm pulling up right now" while still in your pajamas looking for your left shoe!</p>
+              <div class="joke-footer">#ClassicBestieLie</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Joke Card 2 -->
+        <div class="joke-card-3d">
+          <div class="card-inner">
+            <div class="card-front joke-theme-purple glass-card">
+              <span class="joke-emoji">👀</span>
+              <h3>Telepathic Eye-Contact</h3>
+              <p class="joke-hint">(Across a crowded room)</p>
+              <span class="flip-prompt">Tap to reveal 🔄</span>
+            </div>
+            <div class="card-back glass-card">
+              <h4>Silent Conversations 👁️👄👁️</h4>
+              <p>That 0.5 second glance across the room when someone says something ridiculous and we both hold in our laughter.</p>
+              <div class="joke-footer">#TelepathyIsReal</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Joke Card 3 -->
+        <div class="joke-card-3d">
+          <div class="card-inner">
+            <div class="card-front joke-theme-cyan glass-card">
+              <span class="joke-emoji">🍕</span>
+              <h3>The 3 AM Snack Heist</h3>
+              <p class="joke-hint">(Midnight survival tactics)</p>
+              <span class="flip-prompt">Tap to reveal 🔄</span>
+            </div>
+            <div class="card-back glass-card">
+              <h4>Midnight Shenanigans 🌙</h4>
+              <p>Sneaking into the kitchen silently at 3 AM like secret agents just to microwave leftover pizza without waking anyone!</p>
+              <div class="joke-footer">#MissionAccomplished</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Joke Card 4 -->
+        <div class="joke-card-3d">
+          <div class="card-inner">
+            <div class="card-front joke-theme-gold glass-card">
+              <span class="joke-emoji">🕵️‍♀️</span>
+              <h3>FBI Detective Mode</h3>
+              <p class="joke-hint">(When we need answers)</p>
+              <span class="flip-prompt">Tap to reveal 🔄</span>
+            </div>
+            <div class="card-back glass-card">
+              <h4>Top Secret Investigation 🔍</h4>
+              <p>Finding someone's second cousin's dog's Instagram account in under 3 minutes based on a first name and a city!</p>
+              <div class="joke-footer">#SherlockBesties</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROMISE SECTION WITH INFINITY HEART -->
+    <section id="promises" class="promises-section section-padding">
+      <div class="section-header text-center">
+        <span class="section-tag">UNBREAKABLE VOWS</span>
+        <h2 class="section-title">My Best Friend Promises ♾️</h2>
+        <p class="section-desc">Guaranteed promises forged under the stars, valid forever.</p>
+      </div>
+
+      <div class="infinity-heart-wrapper">
+        <svg class="infinity-svg" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="infinityGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FF2A85" />
+              <stop offset="50%" stop-color="#9D4EDD" />
+              <stop offset="100%" stop-color="#00F0FF" />
+            </linearGradient>
+            <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="8" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          
+          <!-- Infinity Loop Path with Heart Arch -->
+          <path class="infinity-path-bg" d="M 100,100 C 50,40 0,60 0,100 C 0,140 50,160 100,100 C 150,40 200,40 250,100 C 300,160 350,160 400,100 C 400,40 350,40 300,100 C 250,160 200,160 150,100 C 100,40 50,40 0,100" />
+          <path class="infinity-path-glow" d="M 100,100 C 30,20 10,130 100,170 C 190,130 170,20 100,100 C 230,20 380,50 380,100 C 380,150 230,180 100,100" filter="url(#glowFilter)" stroke="url(#infinityGlow)" />
+        </svg>
+
+        <div class="center-heart-node">
+          <span class="heart-pulse-icon">💖</span>
+        </div>
+      </div>
+
+      <div class="promises-grid">
+        <div class="promise-card glass-card">
+          <div class="promise-icon">📱</div>
+          <h3>Always 1 Call Away</h3>
+          <p>Whether it's 2 AM breakdowns or 2 PM good news, my phone is never on Do Not Disturb for you.</p>
+        </div>
+
+        <div class="promise-card glass-card">
+          <div class="promise-icon">🔒</div>
+          <h3>Vault of Secrets</h3>
+          <p>Your deepest secrets, awkward moments, and embarrassing stories are safer with me than in Fort Knox.</p>
+        </div>
+
+        <div class="promise-card glass-card">
+          <div class="promise-icon">🚀</div>
+          <h3>Chief Cheerleader</h3>
+          <p>I will always hype your achievements louder than anyone else in the room. Your wins are my wins.</p>
+        </div>
+
+        <div class="promise-card glass-card">
+          <div class="promise-icon">🛡️</div>
+          <h3>Zero-Judgment Zone</h3>
+          <p>A safe harbor where you can be 100% unapologetically yourself without fear or pretense.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SURPRISE BUTTON & INTERACTIVE REEL -->
+    <section class="surprise-section section-padding text-center">
+      <div class="surprise-box-container glass-card glowing-border-pink">
+        <div class="surprise-sparkles">✨ 🎉 💖 🌟</div>
+        <h2 class="surprise-title">Ready for a Cosmic Surprise?</h2>
+        <p class="surprise-desc">Click the glowing chest below to trigger a burst of joy and reveal your best friend fortune!</p>
+        
+        <button class="surprise-chest-btn" id="surpriseChestBtn">
+          <span class="chest-icon">🎁</span>
+          <span class="chest-glow"></span>
+          <span class="chest-label">OPEN SURPRISE</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- FINAL THANK YOU & SILHOUETTE SECTION -->
+    <section id="thankyou" class="thankyou-section section-padding">
+      <div class="thankyou-card glass-card">
+        <div class="thankyou-bg-art">
+          <img src="assets/hero.jpg" alt="Friends Silhouette" class="silhouette-img">
+          <div class="art-gradient-overlay"></div>
+        </div>
+
+        <div class="thankyou-content">
+          <span class="thankyou-tag">ELEVATED IN THE STARS</span>
+          <h2 class="thankyou-title">Thank You For Being You ❤️</h2>
+          
+          <p class="thankyou-quote">
+            "A true friend is someone who reaches for your hand and touches your heart."
+          </p>
+
+          <p class="thankyou-body">
+            You are my soulmate bestie, my sounding board, and my favorite person to make memories with. No matter how far we travel or how old we get, this cosmic bond is written in the stars forever.
+          </p>
+
+          <div class="love-counter-box">
+            <button class="love-btn" id="loveBtn">
+              <span class="love-icon">💖</span>
+              <span class="love-text">Send Love</span>
+            </button>
+            <div class="counter-display">
+              <span id="loveCount">1,000,000</span> Hearts Sent
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="galaxy-footer">
+    <div class="footer-content">
+      <p>Crafted with endless love & neon galaxy vibes for my Best Friend ✨</p>
+      <div class="footer-links">
+        <span>2019 - 2025 & Beyond</span> • <span>Unbreakable Bond</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SECRET MESSAGE MODAL -->
+  <div class="modal-overlay" id="secretModal">
+    <div class="modal-card glass-card">
+      <button class="modal-close" id="closeSecretModal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-icon">🔐</span>
+        <h3>Top Secret Bestie Vault</h3>
+        <p>Enter the secret passcode or click unlock!</p>
+      </div>
+      <div class="modal-body">
+        <div class="passcode-input-group">
+          <input type="password" id="secretPasscode" placeholder="Enter secret (Hint: BESTIES)" value="BESTIES">
+          <button class="btn-glow btn-primary-sm" id="unlockPassBtn">Unlock 🔓</button>
+        </div>
+        <div class="secret-revealed-box hidden" id="secretRevealedBox">
+          <div class="sparkle-stars">✨ 🌟 ✨</div>
+          <h4>Secret Message Unlocked! 💌</h4>
+          <p>
+            "You are genuinely one of the best things that ever happened to my life. Never forget how amazing, talented, and loved you are!"
+          </p>
+          <div class="coupon-card">
+            <span>🎟️ FREE BESTIE COUPON:</span>
+            <strong>1x Free Dinner + Midnight Boba Run on Me!</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SURPRISE MODAL -->
+  <div class="modal-overlay" id="surpriseModal">
+    <div class="modal-card glass-card surprise-modal-card">
+      <button class="modal-close" id="closeSurpriseModal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-icon">🎉</span>
+        <h3>Cosmic Bestie Fortune!</h3>
+      </div>
+      <div class="modal-body text-center">
+        <div class="fortune-wheel-result">
+          <span class="fortune-icon">🌌</span>
+          <h4 id="fortuneText">"Your friendship will spawn 100+ more legendary adventures and infinite coffee runs!"</h4>
+        </div>
+        <button class="btn-glow btn-primary" id="spinAgainBtn">Spin Another Fortune 🎲</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL FOR GALLERY -->
+  <div class="modal-overlay" id="lightboxModal">
+    <div class="lightbox-content glass-card">
+      <button class="modal-close" id="closeLightbox">&times;</button>
+      <img src="" id="lightboxImg" alt="Expanded Memory">
+      <div class="lightbox-caption">
+        <h4 id="lightboxTitle">Memory Title</h4>
+        <p id="lightboxSub">Memory Subtitle</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
